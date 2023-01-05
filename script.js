@@ -33,7 +33,7 @@ btnAboutUs.addEventListener("click", function (e) {
   e.preventDefault();
   sectionCertificateEl.scrollIntoView({ behavior: "smooth" });
 });
-
+//
 const btnServicePatner = document.querySelector(".btn-service-patner");
 const sectionServicePatner = document.querySelector(".delivered-services");
 
