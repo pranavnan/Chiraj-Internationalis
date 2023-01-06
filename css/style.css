@@ -335,7 +335,15 @@ body {
 .section-service-offering {
   padding: 1.2rem 0 9.6rem 0;
   margin-bottom: 9.6rem;
+  position: relative;
 }
+
+.click-more-detail {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
 .main-service {
   font-size: 1.8rem;
   align-content: center;
@@ -363,6 +371,20 @@ body {
 .main-service div:hover {
   background-color: #e6f7fd;
   cursor: pointer;
+}
+
+.more-detail-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+
+.click-here-link {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.3s;
+  border-radius: 11px;
 }
 
 /*****************************/

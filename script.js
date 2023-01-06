@@ -41,3 +41,88 @@ btnServicePatner.addEventListener("click", function (e) {
   e.preventDefault();
   sectionServicePatner.scrollIntoView({ behavior: "smooth" });
 });
+
+// How we work modal
+const thirdInseption = document.querySelector(".third-inseption");
+const thirdContentment = document.querySelector(".third-contentment");
+const thirdSorting = document.querySelector(".third-sorting");
+const thirdQuality = document.querySelector(".third-quality");
+const thirdCS1 = document.querySelector(".third-cs1");
+const qualityInseption = document.querySelector(".quality-inseption");
+const thirdRework = document.querySelector(".third-rework");
+const thirdGP12 = document.querySelector(".third-gp12");
+const thirdSafeLunch = document.querySelector(".third-safe-lunch");
+const thirdInfrared = document.querySelector(".third-infrared");
+
+const modalWindow = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const modalImg = document.querySelector(".modal-img");
+const closeModal = document.querySelector(".close-modal");
+const modalHeading = document.querySelector(".modal-heading");
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModalWindow();
+  }
+});
+closeModal.addEventListener("click", closeModalWindow);
+overlay.addEventListener("click", closeModalWindow);
+
+thirdInseption.addEventListener("click", function () {
+  showImage("img/modal/third-party-inseption.jpg", "Third Party Inseption");
+});
+
+thirdContentment.addEventListener("click", function () {
+  showImage(
+    "img/modal/Third-Party-Contentment.jpeg",
+    "Third Party Contentment"
+  );
+});
+
+thirdSorting.addEventListener("click", function () {
+  showImage("img/modal/third-party-sorting.jpg", "Third Party Sorting");
+});
+
+thirdQuality.addEventListener("click", function () {
+  showImage(
+    "img/modal/Third-Party-Quality-Control.jpg",
+    "Third Party Quality Control"
+  );
+});
+
+thirdCS1.addEventListener("click", function () {
+  showImage("img/modal/CS1-&-CS2-Inspection.jpg", "CS1 & CS2 Inspection");
+});
+
+qualityInseption.addEventListener("click", function () {
+  showImage("img/modal/Quality-Inspection.jpeg", "Quality Inspection");
+});
+
+thirdRework.addEventListener("click", function () {
+  showImage("img/modal/Rework.jpg", "Rework");
+});
+
+thirdGP12.addEventListener("click", function () {
+  showImage("img/modal/GP-12.jpg", "GP-12");
+});
+
+thirdSafeLunch.addEventListener("click", function () {
+  showImage("img/modal/Safe-Lunch.jpeg", "Safe Lunch");
+});
+
+thirdInfrared.addEventListener("click", function () {
+  showImage("img/modal/Infrared-Inseption.png", "Infrared Inseption");
+});
+
+function showImage(imgPath, heading) {
+  modalImg.src = imgPath;
+  modalImg.alt = heading;
+  modalHeading.textContent = heading;
+  modalWindow.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+function closeModalWindow() {
+  modalWindow.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
